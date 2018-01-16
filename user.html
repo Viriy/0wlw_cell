@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>我的-物联网应用系统管理平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/resize.js"></script>
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/wcolorfont.js"></script>
+</head>
+
+<body class="bodybg">
+    <div class="mui-off-canvas-wrap">
+        <!--主界面部分-->
+        <div class="mui-inner-wrap">
+            <!--footer-->
+            <footer class="mui-bar mui-bar-tab f_nav">
+                <a class="mui-tab-item" href="index.html">
+                    <i class="icon-n1"></i>
+                    <p class="mui-tab-label">首页</p>
+                </a>
+                <a class="mui-tab-item" href="nav2.html">
+                    <i class="icon-n2"></i>
+                    <p class="mui-tab-label">控制设备</p>
+                </a>
+                <a class="mui-tab-item" href="nav3.html">
+                    <i class="icon-n3"></i>
+                    <p class="mui-tab-label">视频监控</p>
+                </a>
+                <a class="mui-tab-item mui-active" href="user.html">
+                    <i class="icon-n4"></i>
+                    <p class="mui-tab-label">我的</p>
+                </a>
+            </footer>
+            <div class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="user_wrap" flex>
+                        <span class="user_avatar i radius mr30">
+                            <img src="images/avatar.gif" alt="">
+                        </span>
+                        <h1 class="txt_wrap white f46">
+                            <p>Viriy</p>
+                            <p>138 0000 0000</p>
+                        </h1>
+                    </div>
+                    <ul class="link_wrap f34 bgfff mt60 user_link">
+                        <li>
+                            <a href="update_info.html" flex>
+                                <svg>
+                                    <use xlink:href="#icon-info"></use>
+                                </svg>
+                                个人信息
+                            </a>
+                        </li>
+                        <li>
+                            <a href="update_pwd.html" flex>
+                                <svg>
+                                    <use xlink:href="#icon-pwd"></use>
+                                </svg>
+                                修改密码
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about_us.html" flex>
+                                <svg>
+                                    <use xlink:href="#icon-us"></use>
+                                </svg>
+                                关于我们
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="btn btn_full tc radius f34" href="login.html">退出账号</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

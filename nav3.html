@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>视频监控-物联网应用系统管理平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/resize.js"></script>
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/wcolorfont.js"></script>
+</head>
+
+<body>
+    <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+        <!--侧滑菜单部分-->
+        <aside id="offCanvasSide" class="mui-off-canvas-right">
+            <div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+                <div class="mui-scroll search_wrap">
+                    <h1 class="f32 t_search bodybg grey"><i class="icon icon-search1 f40"></i>快速查询</h1>
+                    <div class="mui-card file_card">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-collapse">
+                                <a href="#">
+                                    <svg>
+                                        <use xlink:href="#icon-file"></use>
+                                    </svg>全部
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse">
+                                <a class="mui-navigate-right" href="#">
+                                    <svg>
+                                        <use xlink:href="#icon-file"></use>
+                                    </svg>新颖园区
+                                </a>
+                                <div class="mui-collapse-content item-child" flex>
+                                    <a href="">6号大棚</a>
+                                    <a href="">7号大棚</a>
+                                    <a href="">8号大棚</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--主界面部分-->
+        <div class="mui-inner-wrap">
+            <!--header-->
+            <header class="mui-bar mui-bar-nav h_header">
+                <h1 class="mui-title">视频监控</h1>
+                <a href="#offCanvasSide" class="mui-icon icon-camera mui-pull-right f52"></a>
+            </header>
+            <!--footer-->
+            <footer class="mui-bar mui-bar-tab f_nav">
+                <a class="mui-tab-item" href="index.html">
+                    <i class="icon-n1"></i>
+                    <p class="mui-tab-label">首页</p>
+                </a>
+                <a class="mui-tab-item" href="nav2.html">
+                    <i class="icon-n2"></i>
+                    <p class="mui-tab-label">控制设备</p>
+                </a>
+                <a class="mui-tab-item mui-active" href="nav3.html">
+                    <i class="icon-n3"></i>
+                    <p class="mui-tab-label">视频监控</p>
+                </a>
+                <a class="mui-tab-item" href="user.html">
+                    <i class="icon-n4"></i>
+                    <p class="mui-tab-label">我的</p>
+                </a>
+            </footer>
+            <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="video_wrap mt radius4">
+                        <img src="images/video.jpg" alt="">
+                    </div>
+                    <ul class="data_show grey f24">
+                        <li flex>
+                            <aside class="white tc">
+                                <h2 class="title f30">数据监控</h2>
+                            </aside>
+                            <ol class="info flex1" flex>
+                                <li flex>
+                                    <svg>
+                                        <use xlink:href="#icon-ph"></use>
+                                    </svg>
+                                    <div class="txt">
+                                        <p>ph值</p>
+                                        <h4><em class="f32 colorlight">6.85</em></h4>
+                                    </div>
+                                </li>
+                                <li flex>
+                                    <svg>
+                                        <use xlink:href="#icon-sun"></use>
+                                    </svg>
+                                    <div class="txt">
+                                        <p>光照度</p>
+                                        <h4><em class="f32 colorlight">48.65</em> lux</h4>
+                                    </div>
+                                </li>
+                                <li flex>
+                                    <svg>
+                                        <use xlink:href="#icon-soil_t"></use>
+                                    </svg>
+                                    <div class="txt">
+                                        <p>土壤温度</p>
+                                        <h4><em class="f32 colorlight">14.79</em> ℃</h4>
+                                    </div>
+                                </li>
+                                <li flex>
+                                    <svg>
+                                        <use xlink:href="#icon-soil_w"></use>
+                                    </svg>
+                                    <div class="txt">
+                                        <p>土壤水分</p>
+                                        <h4><em class="f32 colorlight">48.65</em> %</h4>
+                                    </div>
+                                </li>
+                                <li flex>
+                                    <svg>
+                                        <use xlink:href="#icon-air_t"></use>
+                                    </svg>
+                                    <div class="txt">
+                                        <p>空气温度</p>
+                                        <h4><em class="f32 colorlight">10.87</em> ℃</h4>
+                                    </div>
+                                </li>
+                                <li flex>
+                                    <svg>
+                                        <use xlink:href="#icon-air_w"></use>
+                                    </svg>
+                                    <div class="txt">
+                                        <p>空气湿度</p>
+                                        <h4><em class="f32 colorlight">92.37</em> %</h4>
+                                    </div>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <div class="title_line f26 grey tc">
+                        <em class="i">设备状态</em>
+                    </div>
+                    <ul class="control_wrap mb50">
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>排风机</h2>
+                                <div class="mui-switch mui-switch-blue mui-active">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-fan"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item mui-active"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range1' value="0" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range1-val'>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>湿帘</h2>
+                                <div class="mui-switch mui-switch-blue">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-wet_curtain"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item mui-active"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range2' value="50" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range2-val'>50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>棉被开</h2>
+                                <label>
+                                    <input type="checkbox" name=""><i class="icon-checkbox"></i>暂停</label>
+                                <div class="mui-switch mui-switch-blue mui-active">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-quilt"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item mui-active"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range3' value="50" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range3-val'>50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>棉被关</h2>
+                                <label>
+                                    <input type="checkbox" name="" checked><i class="icon-checkbox"></i>暂停</label>
+                                <div class="mui-switch mui-switch-blue mui-active">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-quilt_off"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item mui-active"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range4' value="50" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range4-val'>50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>轴流风机</h2>
+                                <div class="mui-switch mui-switch-blue mui-active">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-axial_fan"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item mui-active"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range5' value="50" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range5-val'>50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>补光灯</h2>
+                                <div class="mui-switch mui-switch-blue mui-active">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-light"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item mui-active"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range6' value="0" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range6-val'>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>上通风口开</h2>
+                                <div class="mui-switch mui-switch-blue mui-active">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-upper_vent"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item mui-active"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range7' value="0" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range7-val'>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>上通风口关</h2>
+                                <div class="mui-switch mui-switch-blue mui-active">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-upper_vent_off"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item mui-active"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range8' value="0" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range8-val'>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>下通风口开</h2>
+                                <div class="mui-switch mui-switch-blue mui-active">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-lower_vent"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item mui-active"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range9' value="0" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range9-val'>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head f32" flex>
+                                <h2>下通风口关</h2>
+                                <div class="mui-switch mui-switch-blue mui-active">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                            </div>
+                            <div class="body" flex>
+                                <svg>
+                                    <use xlink:href="#icon-lower_vent_off"></use>
+                                </svg>
+                                <div class="r_wrap flex1">
+                                    <div class="mui-slider tab_btn">
+                                        <div class="mui-segmented-control mui-segmented-control-inverted grey f30" flex="box:mean">
+                                            <a class="mui-control-item mui-active"><i class="icon-automatic f40"></i>自动</a>
+                                            <a class="mui-control-item"><i class="icon-manual f40"></i>手动</a>
+                                        </div>
+                                    </div>
+                                    <div class="range_box" flex>
+                                        <div class="mui-input-row mui-input-range mt10 flex1">
+                                            <input type="range" id='range10' value="0" min="0" max="100">
+                                        </div>
+                                        <span class="range_val grey" id='range10-val'>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- off-canvas backdrop -->
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

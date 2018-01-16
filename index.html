@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>物联网应用系统管理平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/resize.js"></script>
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/wcolorfont.js"></script>
+</head>
+
+<body>
+    <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+        <!--侧滑菜单部分-->
+        <aside id="offCanvasSide" class="mui-off-canvas-right">
+            <div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+                <div class="mui-scroll search_wrap">
+                    <h1 class="f32 t_search bodybg grey"><i class="icon icon-search1 f40"></i>快速查询</h1>
+                    <div class="mui-card file_card">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-collapse">
+                                <a href="#">
+                                    <svg>
+                                        <use xlink:href="#icon-file"></use>
+                                    </svg>全部
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse">
+                                <a class="mui-navigate-right" href="#">
+                                    <svg>
+                                        <use xlink:href="#icon-file"></use>
+                                    </svg>新颖园区
+                                </a>
+                                <div class="mui-collapse-content item-child" flex>
+                                    <a href="">6号大棚</a>
+                                    <a href="">7号大棚</a>
+                                    <a href="">8号大棚</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--主界面部分-->
+        <div class="mui-inner-wrap">
+            <!--header-->
+            <header class="mui-bar mui-bar-nav h_header">
+                <h1 class="mui-title">首页</h1>
+                <a href="#offCanvasSide" class="mui-icon icon-search mui-pull-right f52"></a>
+            </header>
+            <!--footer-->
+            <footer class="mui-bar mui-bar-tab f_nav">
+                <a class="mui-tab-item mui-active" href="index.html">
+                    <i class="icon-n1"></i>
+                    <p class="mui-tab-label">首页</p>
+                </a>
+                <a class="mui-tab-item" href="nav2.html">
+                    <i class="icon-n2"></i>
+                    <p class="mui-tab-label">控制设备</p>
+                </a>
+                <a class="mui-tab-item" href="nav3.html">
+                    <i class="icon-n3"></i>
+                    <p class="mui-tab-label">视频监控</p>
+                </a>
+                <a class="mui-tab-item" href="user.html">
+                    <i class="icon-n4"></i>
+                    <p class="mui-tab-label">我的</p>
+                </a>
+            </footer>
+            <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+                <div class="mui-slider h100">
+                    <div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted grey f30">
+                        <a class="mui-control-item mui-active" href="#real-time-data">实时数据</a>
+                        <a class="mui-control-item" href="#warning-data">警告数据</a>
+                    </div>
+                    <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+                    <div class="mui-slider-group">
+                        <div id="real-time-data" class="mui-slider-item mui-control-content mui-active">
+                            <div id="scroll1" class="mui-scroll-wrapper">
+                                <div class="mui-scroll">
+                                    <ul class="data_show grey f24 mb30">
+                                        <li flex>
+                                            <aside class="white tc">
+                                                <h2 class="title f26"><em class="f54">6号</em>大棚</h2>
+                                                <a href="" class="icon-data f40"></a>
+                                            </aside>
+                                            <ol class="info flex1" flex>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-ph"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>ph值</p>
+                                                        <h4><em class="f32 colorlight">6.85</em></h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-sun"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>光照度</p>
+                                                        <h4><em class="f32 colorlight">48.65</em> lux</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-soil_t"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>土壤温度</p>
+                                                        <h4><em class="f32 colorlight">14.79</em> ℃</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-soil_w"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>土壤水分</p>
+                                                        <h4><em class="f32 colorlight">48.65</em> %</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-air_t"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>空气温度</p>
+                                                        <h4><em class="f32 colorlight">10.87</em> ℃</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-air_w"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>空气湿度</p>
+                                                        <h4><em class="f32 colorlight">92.37</em> %</h4>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li class="warn_data" flex>
+                                            <aside class="white tc">
+                                                <h2 class="title f26"><em class="f54">7号</em>大棚</h2>
+                                                <a href="" class="icon-data f40"></a>
+                                            </aside>
+                                            <ol class="info flex1" flex>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-ph"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>ph值</p>
+                                                        <h4><em class="f32 colorlight">6.85</em></h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-sun"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>光照度</p>
+                                                        <h4><em class="f32 colorlight">48.65</em> lux</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-soil_t"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>土壤温度
+                                                            <a href="" class="icon-warn red f36 animation_warm"></a>
+                                                        </p>
+                                                        <h4><em class="f32 colorlight">14.79</em> ℃</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-soil_w"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>土壤水分</p>
+                                                        <h4><em class="f32 colorlight">48.65</em> %</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-air_t"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>空气温度</p>
+                                                        <h4><em class="f32 colorlight">10.87</em> ℃</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-air_w"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>空气湿度</p>
+                                                        <h4><em class="f32 colorlight">92.37</em> %</h4>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li flex>
+                                            <aside class="white tc">
+                                                <h2 class="title f26"><em class="f54">8号</em>大棚</h2>
+                                                <a href="" class="icon-data f40"></a>
+                                            </aside>
+                                            <ol class="info flex1" flex>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-ph"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>ph值</p>
+                                                        <h4><em class="f32 colorlight">6.85</em></h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-sun"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>光照度</p>
+                                                        <h4><em class="f32 colorlight">48.65</em> lux</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-soil_t"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>土壤温度</p>
+                                                        <h4><em class="f32 colorlight">14.79</em> ℃</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-soil_w"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>土壤水分</p>
+                                                        <h4><em class="f32 colorlight">48.65</em> %</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-air_t"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>空气温度</p>
+                                                        <h4><em class="f32 colorlight">10.87</em> ℃</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-air_w"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>空气湿度</p>
+                                                        <h4><em class="f32 colorlight">92.37</em> %</h4>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="warning-data" class="mui-slider-item mui-control-content">
+                            <div id="scroll2" class="mui-scroll-wrapper">
+                                <div class="mui-scroll">
+                                    <ul class="data_show grey f24">
+                                        <li class="warn_data" flex>
+                                            <aside class="white tc">
+                                                <h2 class="title f26"><em class="f54">7号</em>大棚</h2>
+                                                <a href="" class="icon-data f40"></a>
+                                            </aside>
+                                            <ol class="info flex1" flex>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-ph"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>ph值</p>
+                                                        <h4><em class="f32 colorlight">6.85</em></h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-sun"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>光照度</p>
+                                                        <h4><em class="f32 colorlight">48.65</em> lux</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-soil_t"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>土壤温度
+                                                            <a href="" class="icon-warn red f36 animation_warm"></a>
+                                                        </p>
+                                                        <h4><em class="f32 colorlight">14.79</em> ℃</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-soil_w"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>土壤水分</p>
+                                                        <h4><em class="f32 colorlight">48.65</em> %</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-air_t"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>空气温度</p>
+                                                        <h4><em class="f32 colorlight">10.87</em> ℃</h4>
+                                                    </div>
+                                                </li>
+                                                <li flex>
+                                                    <svg>
+                                                        <use xlink:href="#icon-air_w"></use>
+                                                    </svg>
+                                                    <div class="txt">
+                                                        <p>空气湿度</p>
+                                                        <h4><em class="f32 colorlight">92.37</em> %</h4>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- off-canvas backdrop -->
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

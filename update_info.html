@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>个人信息-物联网应用系统管理平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/resize.js"></script>
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/wcolorfont.js"></script>
+</head>
+
+<body class="bodybg">
+    <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+        <!--主界面部分-->
+        <div class="mui-inner-wrap">
+            <!--header-->
+            <header class="mui-bar mui-bar-nav h_header">
+                <a href="jabvascript:;" class="mui-action-back pa icon icon-back f52 t0 l0 tc"></a>
+                <h1 class="mui-title">个人信息</h1>
+            </header>
+            <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="form_wrap form_default f32 bgfff">
+                        <li flex>
+                            <span><i class="red">*</i>昵　　称</span>
+                            <input type="text" name="" placeholder="请输入昵称" required>
+                        </li>
+                        <li flex>
+                            <span><i class="red">*</i>用户姓名</span>
+                            <input type="text" name="" placeholder="请输入用户姓名" required>
+                        </li>
+                        <li flex>
+                            <span>性　　别</span>
+                            <select name="">
+                                <option value="">男</option>
+                                <option value="">女</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <ul class="form_wrap form_default f32 bgfff mt">
+                        <li flex>
+                            <span>座　　机</span>
+                            <input type="text" name="" placeholder="请输入座机" required>
+                        </li>
+                        <li flex>
+                            <span>电　　话</span>
+                            <input type="text" name="" placeholder="请输入电话" required>
+                        </li>
+                        <li flex>
+                            <span>Q　　 Q</span>
+                            <input type="text" name="" placeholder="请输入QQ" required>
+                        </li>
+                        <li flex>
+                            <span>邮　　箱</span>
+                            <input type="text" name="" placeholder="请输入邮箱" required>
+                        </li>
+                    </ul>
+                    <div class="tc">
+                        <input class="btn btn_full tc radius f34" type="button" name="" value="确 定">
+                    </div>
+                </div>
+            </div>
+            <!-- off-canvas backdrop -->
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
