@@ -285,7 +285,7 @@ ul,ol, menu, dir {-webkit-padding-start:0}
 .f_nav{height:1.466667rem;background-color:#fff;-webkit-box-shadow:0 -1px 0 #e6eff6 !important;box-shadow:0 -1px 0 #e6eff6 !important}
 .f_nav.mui-bar-tab .mui-tab-item{height:1.466667rem}
 .f_nav .mui-tab-item i{font-size:0.72rem;line-height: 1em}
-.f_nav .mui-tab-item{color:#97a0b5;font-size:0.293333rem}
+.f_nav .mui-tab-item{color:#97a0b5;font-size:0.293333rem;line-height:.45rem}
 .f_nav .mui-tab-item.mui-active{color:#2ba6ff}
 
 @media (min-width:540px){
@@ -296,8 +296,6 @@ ul,ol, menu, dir {-webkit-padding-start:0}
 input::-webkit-input-safebox-button{display:none}
 
 .mui-off-canvas-right.side_full{width:100%;max-width:100%}
-
-
 
 .animation_warm {
     -webkit-animation:warm 1.44s ease infinite;
