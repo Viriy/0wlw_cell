@@ -284,7 +284,7 @@ ul,ol, menu, dir {-webkit-padding-start:0}
 /*footer*/
 .f_nav{height:1.466667rem;background-color:#fff;-webkit-box-shadow:0 -1px 0 #e6eff6 !important;box-shadow:0 -1px 0 #e6eff6 !important}
 .f_nav.mui-bar-tab .mui-tab-item{height:1.466667rem}
-.f_nav .mui-tab-item i{font-size:0.72rem;line-height:.8rem}
+.f_nav .mui-tab-item i{font-size:0.72rem;line-height:.7rem}
 .f_nav .mui-tab-item{color:#97a0b5;font-size:0.293333rem}
 .f_nav .mui-tab-item.mui-active{color:#2ba6ff}
 
