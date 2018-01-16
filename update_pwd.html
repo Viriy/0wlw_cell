@@ -14,37 +14,28 @@
 </head>
 
 <body class="bodybg">
-    <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
-        <!--主界面部分-->
-        <div class="mui-inner-wrap">
-            <!--header-->
-            <header class="mui-bar mui-bar-nav h_header">
-                <a href="jabvascript:;" class="mui-action-back pa icon icon-back f52 t0 l0 tc"></a>
-                <h1 class="mui-title">修改密码</h1>
-            </header>
-            <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <ul class="form_wrap form_default f32 bgfff">
-                        <li flex>
-                            <span><i class="red">*</i>原　密　码</span>
-                            <input type="password" name="" placeholder="请输入原密码" required>
-                        </li>
-                        <li flex>
-                            <span><i class="red">*</i>新　密　码</span>
-                            <input type="password" name="" placeholder="请输入新密码" required>
-                        </li>
-                        <li flex>
-                            <span><i class="red">*</i>确认新密码</span>
-                            <input type="password" name="" placeholder="请再次输入新密码" required>
-                        </li>
-                    </ul>
-                    <div class="tc">
-                        <input class="btn btn_full tc radius f34" type="button" name="" value="确 定">
-                    </div>
-                </div>
-            </div>
-            <!-- off-canvas backdrop -->
-            <div class="mui-off-canvas-backdrop"></div>
+    <!--header-->
+    <header class="mui-bar mui-bar-nav h_header">
+        <a href="jabvascript:;" class="mui-action-back pa icon icon-back f52 t0 l0 tc"></a>
+        <h1 class="mui-title">修改密码</h1>
+    </header>
+    <div class="mui-content">
+        <ul class="form_wrap form_default f32 bgfff">
+            <li flex>
+                <span><i class="red">*</i>原　密　码</span>
+                <input type="password" name="" placeholder="请输入原密码" required>
+            </li>
+            <li flex>
+                <span><i class="red">*</i>新　密　码</span>
+                <input type="password" name="" placeholder="请输入新密码" required>
+            </li>
+            <li flex>
+                <span><i class="red">*</i>确认新密码</span>
+                <input type="password" name="" placeholder="请再次输入新密码" required>
+            </li>
+        </ul>
+        <div class="tc">
+            <input class="btn btn_full tc radius f34" type="button" name="" value="确 定">
         </div>
     </div>
     <script src="js/mui.min.js"></script>

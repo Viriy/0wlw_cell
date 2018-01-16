@@ -2,7 +2,7 @@
 .mui-off-canvas-right{width:61.333%;max-width:6.133333rem;background:#fff}
 .mui-off-canvas-wrap.mui-active .mui-off-canvas-backdrop{background:none;box-shadow:none}
 
-.mui-off-canvas-wrap .mui-inner-wrap,.mui-off-canvas-wrap,.mui-content,.w540{max-width:540px;margin-left:auto !important;margin-right:auto !important}
+.mui-off-canvas-wrap .mui-inner-wrap,.mui-off-canvas-wrap,.mui-content,.w540,.h_header,.f_nav{max-width:540px;margin-left:auto !important;margin-right:auto !important}
 a{color:inherit}
 
 .mui-bar-nav~.mui-content{padding-top:1.2rem}
@@ -289,7 +289,6 @@ ul,ol, menu, dir {-webkit-padding-start:0}
 .f_nav .mui-tab-item.mui-active{color:#2ba6ff}
 
 @media (min-width:540px){
-    .f_nav{max-width:540px;left:50%;margin-left:-270px}
     .login_bg{background-size: 540px}
 }
 
