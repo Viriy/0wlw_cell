@@ -290,6 +290,7 @@ ul,ol, menu, dir {-webkit-padding-start:0}
 
 @media (min-width:540px){
     .f_nav{max-width:540px;left:50%;margin-left:-270px}
+    .login_bg{background-size: 540px}
 }
 
 input::-webkit-input-safebox-button{display:none}
